@@ -49,12 +49,13 @@ const Navbar = () => {
                 <li className='text-[#000000] hover:text-[#000080] hover:font-medium hover:translate-x-0.5 duration-100'>
                     <Link to="/">Resources</Link>
                 </li>
-               
+                <Link to="/login">
                 <li>
                     <button onClick={handleClick} className="bg-[#FFFFFF] hover:bg-[#23297a] hover:-translate-y-0.5 text-[#000] hover:text-white py-2 px-4 border border-[#23297a] hover:border-transparent rounded duration-200">
                         Login
                     </button>
                 </li>
+                </Link>
                 <Link to="/">
                     <li>
                         <button  className="bg-[#23297a] hover:bg-[#FFFFFF] hover:-translate-y-0.5 text-white hover:text-[#000000]  py-2 px-4 border border-[#23297a] rounded duration-200">
