@@ -1,15 +1,21 @@
-import Navbar from "./Componets/Navbar";
+import Header from "./Componets/Header/Header";
 import { Route,Routes} from "react-router-dom";
-import Home from "./Componets/Home";
-import About from "./Componets/About";
+import Home from "./Componets/Home/Home";
+import Footers from '../src/Componets/Footer/Footers'
+import Login from "./Componets/Login/Login";
 function App() {
   return (
     <div className="App">
-      <Navbar/>
+      {/* <Navbar/>
+      <Footer/> */}
+      <Header/>
       <Routes>
+        
         <Route path="/" element={<Home/>}></Route>
-        <Route path="/about" exact element={<About/>}></Route>
+        <Route path="/login" element={<Login/>}></Route>
       </Routes>
+      <Footers/>
+      
     </div>
   );
 }

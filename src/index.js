@@ -3,13 +3,26 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-
+import { ThemeProvider } from "@material-tailwind/react";
+import { SnackbarProvider,closeSnackbar  } from 'notistack'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <ThemeProvider>
+        <SnackbarProvider hideIconVariant
+          anchorOrigin={{vertical: 'top',horizontal: 'center',}} 
+          autoHideDuration={3000}
+          action={(snackbarId) => (
+            <button onClick={() => closeSnackbar(snackbarId)}>
+              close
+            </button>
+          )}
+          >
+          <App />
+        </SnackbarProvider>
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
